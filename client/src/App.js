@@ -39,14 +39,11 @@ export default function App() {
       />
 
       {/* <div>Replace this Div with your Routes</div> */}
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/movies">Movies</Link>
-      </div>
-
       <Switch>
         <Route path="/movies/:movieID">
-          <Movie movies={movieList} />
+          <Link to="/movies/:movieID">
+            <Movie movies={movieList} />
+          </Link>
         </Route>
         <Route path="/">
           <MovieList movies={movieList} />
